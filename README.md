@@ -8,6 +8,7 @@ sdk_version: "6.3.0"
 app_file: app.py
 pinned: true
 ---
+
 # AI Meeting Intelligence Assistant
 
 An end-to-end AI system that transforms raw meeting audio into structured, speaker-aware transcripts, summaries, and shareable PDF reports.
