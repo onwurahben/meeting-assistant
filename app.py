@@ -1,9 +1,10 @@
 import gradio as gr
+import os
 from logic import process_meeting, send_email
 
 
 # Build Gradio UI
-with gr.Blocks(theme=gr.themes.Soft(), title="AI Meeting Assistant") as demo:
+with gr.Blocks(title="AI Meeting Assistant") as demo:
     gr.Markdown("# 🎧 AI Meeting Assistant")
     gr.Markdown("Upload your meeting audio to get an automated transcript, professional summary, and downloadable PDF report.")
     
@@ -53,6 +54,7 @@ if __name__ == "__main__":
     demo.launch(
         server_name="0.0.0.0",
         server_port=int(os.getenv("PORT", 7860)),
-        share=False
+        share=False,
+        theme=gr.themes.Soft()
     )
 
