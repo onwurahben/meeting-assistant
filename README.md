@@ -127,10 +127,6 @@ It demonstrates:
 
 ---
 
-## 📄 License
 
-MIT License
-
----
 
 **Built as an AI engineering project.**
