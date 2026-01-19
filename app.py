@@ -48,5 +48,11 @@ with gr.Blocks(theme=gr.themes.Soft(), title="AI Meeting Assistant") as demo:
     gr.Markdown("*Powered by Groq (Whisper-v3 & LLaMA-3.3)*")
 
 if __name__ == "__main__":
-    demo.launch(server_name="127.0.0.1", server_port=7860, share=False)
+
+    # ⚠️ Always use server_name="0.0.0.0" on HF Spaces so the external health check can reach the app!
+    demo.launch(
+        server_name="0.0.0.0",
+        server_port=int(os.getenv("PORT", 7860)),
+        share=False
+    )
 
